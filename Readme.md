@@ -38,6 +38,50 @@ Once you have installed the TypeScript compiler, you can create a TypeScript fil
 tsc app.ts
 ```
 
+## Data Types
+
+TypeScript has a number of built-in data types that can be used to define variables. Some of the key data types in TypeScript are:
+
+- number: This data type is used to represent numeric values. For example, let age: number = 30;
+- string: This data type is used to represent text values. For example,
+
+```typescript
+let name: string = 'John'
+```
+
+- boolean: This data type is used to represent boolean values. For example,
+
+```typescript
+let isMarried: boolean = true
+```
+
+- any: This data type is used to represent any type of value. For example,
+
+```typescript
+let x: any = 10
+let y: any = 'Hello'
+```
+
+- void: This data type is used to represent the absence of a value. For example,
+
+```typescript
+function greet(): void {
+  console.log('Hello')
+}
+```
+
+- null: This data type is used to represent a null value. For example,
+
+```typescript
+let x: null = null
+```
+
+- undefined: This data type is used to represent an undefined value. For example,
+
+```typescript
+let y: undefined = undefined
+```
+
 ## Compiler Options
 
 The TypeScript compiler has a number of options that can be used to customize the compilation process. Some of the key compiler options are:
