@@ -82,25 +82,38 @@ let x: null = null
 let y: undefined = undefined
 ```
 
-## Compiler Options
+- array: This data type is used to represent an array of values. For example,
 
-The TypeScript compiler has a number of options that can be used to customize the compilation process. Some of the key compiler options are:
+```typescript
+let numbers: number[] = [1, 2, 3, 4, 5]
+```
 
-- --target: This option is used to specify the ECMAScript target version. The possible values are "ES3", "ES5", "ES6", "ES2015", "ES2016", "ES2017", "ES2018", "ES2019
+- tuple: This data type is used to represent an array of values with a fixed number of elements. For example,
 
-- --module: This option is used to specify the module code generation. The possible values are "none", "commonjs", "amd", "system", "umd", "es6", "es2015", "esnext"
+```typescript
+let person: [string, number] = ['John', 30]
+```
 
-- --outFile: This option is used to specify the output file. The output file will contain all the compiled JavaScript code.
+- enum: This data type is used to represent a set of named constants. For example,
 
-- --watch: This option is used to watch input files and recompile whenever they change.
+```typescript
+enum Color {
+  Red,
+  Green,
+  Blue,
+}
+let c: Color = Color.Green
+```
 
-- --sourceMap: This option is used to generate source map files.
+- object: This data type is used to represent an object. For example,
 
-- --strict: This option is used to enable all strict type checking options.
+```typescript
+let person: object = { name: 'John', age: 30 }
+```
 
-## Example
+## Classes
 
-Here is an example of a simple TypeScript program that defines a class named Greeter:
+Classes are a fundamental building block of object-oriented programming. Classes can be used to create objects that have properties and methods. Classes in TypeScript are defined using the class keyword. For example, here is a simple class definition in TypeScript:
 
 ```typescript
 class Greeter {
@@ -116,7 +129,67 @@ class Greeter {
 }
 ```
 
-This will compile the TypeScript file to JavaScript and create a JavaScript file named app.js. You can then run the JavaScript file using Node.js or in a web browser.
+In this example, the Greeter class has a property named greeting and a method named greet. The constructor method is used to initialize the greeting property. The greet method is used to return a greeting message.
+
+## Interfaces
+
+Interfaces are used to define the structure of objects. Interfaces can be used to define the properties and methods that an object must have. Interfaces in TypeScript are defined using the interface keyword. For example, here is a simple interface definition in TypeScript:
+
+```typescript
+interface Person {
+  name: string
+  age: number
+}
+```
+
+## Types
+
+Types are used to define custom data types in TypeScript. Types can be used to define the structure of objects, functions, and variables. Types in TypeScript are defined using the type keyword. For example, here is a simple type definition in TypeScript:
+
+```typescript
+type Person = {
+  name: string
+  age: number
+}
+
+let person: Person = {
+  name: 'John',
+  age: 30,
+}
+```
+
+## ! and ? Operators
+
+The ! operator is used to assert that a variable is not null or undefined. The ? operator is used to make a property optional. For example, here is an example of using the ! and ? operators in TypeScript:
+
+```typescript
+let x: number | null = 10
+let y: number | undefined = undefined
+
+let person: { name: string; age?: number } = { name: 'John' }
+
+console.log(x!)
+console.log(y!)
+console.log(person.age)
+```
+
+In this example, the Person interface has two properties: name and age. An object that implements the Person interface must have these two properties.
+
+## Compiler Options
+
+The TypeScript compiler has a number of options that can be used to customize the compilation process. Some of the key compiler options are:
+
+- --target: This option is used to specify the ECMAScript target version. The possible values are "ES3", "ES5", "ES6", "ES2015", "ES2016", "ES2017", "ES2018", "ES2019
+
+- --module: This option is used to specify the module code generation. The possible values are "none", "commonjs", "amd", "system", "umd", "es6", "es2015", "esnext"
+
+- --outFile: This option is used to specify the output file. The output file will contain all the compiled JavaScript code.
+
+- --watch: This option is used to watch input files and recompile whenever they change.
+
+- --sourceMap: This option is used to generate source map files.
+
+- --strict: This option is used to enable all strict type checking options.
 
 ## Conclusion
 
